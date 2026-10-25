@@ -8,7 +8,6 @@
     "I've got an idea for something I'd like to build",
     "Let's figure out why this broke"
   ],
-  "category": "Developer Tools",
   "keywords": [
     "skills",
     "tdd",
@@ -22,6 +21,6 @@
     "email": "jesse@fsck.com"
   },
   "homepage": "https://github.com/obra/superpowers",
-  "repository": "https://github.com/obra/superpowers",
+  "repository": "https://github.com/titbm/superpowers-antigravity",
   "license": "MIT"
 }
