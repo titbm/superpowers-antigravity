@@ -9,6 +9,7 @@ Superpowers is a complete software development methodology for your coding agent
 - [Why this fork?](#why-this-fork)
 - [How it works](#how-it-works)
 - [Installation](#installation)
+- [Slash Commands & Menu Visibility](#slash-commands--menu-visibility)
 - [The Basic Workflow](#the-basic-workflow)
 - [When Something Goes Wrong](#when-something-goes-wrong)
 - [What's Inside](#whats-inside)
@@ -46,6 +47,20 @@ agy plugin install https://github.com/titbm/superpowers-antigravity
 Antigravity lists each installed skill's description, and the description of
 the `using-superpowers` skill prompts the model to load that skill at the start
 of a conversation. Reinstall with the same command to update.
+
+## Slash Commands & Menu Visibility
+
+Superpowers was designed by its author to be fully autonomous: you do not invoke individual skills manually — the agent triggers them automatically based on the task.
+
+Because Antigravity exposes every discovered skill as a `/` slash command by default, 15 internal workflow steps end up cluttering the chat menu. To keep the UI clean, all internal skills are hidden from Antigravity's menu using the native frontmatter directive:
+
+````yaml
+disable-slash-command: true
+````
+
+Only `/using-superpowers` remains visible in the `/` menu as an indicator that the plugin is currently active.
+
+**To restore upstream state:** If you want all 15 skills visible in the `/` menu, simply remove the `disable-slash-command: true` line from `skills/*/SKILL.md`.
 
 ## The Basic Workflow
 
