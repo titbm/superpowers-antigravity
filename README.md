@@ -20,7 +20,7 @@ Superpowers is a complete software development methodology for your coding agent
 ## Why this fork?
 
 While upstream Superpowers is a multi-harness monorepo primarily tuned for Claude Code, this fork is purpose-built and optimized specifically for **Google Antigravity (2.0 Desktop & CLI)**:
-- **Guaranteed auto-activation:** Uses a native rule (`rules/superpowers-antigravity.md` with `trigger: always_on`) instead of relying on the model voluntarily picking up skill descriptions.
+- **Guaranteed auto-activation:** Uses a native rule (`rules/superpowers_antigravity.md` with `trigger: always_on`) instead of relying on the model voluntarily picking up skill descriptions.
 - **Accurate tool mapping:** Aligned with modern Antigravity tools (`read_file`, `edit_file`, `ask_question`, `run_command`, subagent routing).
 - **Dedicated packaging:** Pruned of 15+ configs for other platforms (Claude, Cursor, Codex, Pi, etc.), packaging only what Antigravity needs.
 

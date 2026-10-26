@@ -1,5 +1,6 @@
 ---
 trigger: always_on
+description: Routes every conversation through Superpowers methodology
 ---
 
 <EXTREMELY-IMPORTANT>
