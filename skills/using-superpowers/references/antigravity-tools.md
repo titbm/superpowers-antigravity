@@ -7,8 +7,9 @@ Skills speak in actions ("dispatch a subagent", "create a todo", "read a file").
 | Read a file | `read_file` | Reads up to 800 lines or 46KB per call |
 | Create a new file | `write_file` | Writes full file contents |
 | Edit a file (targeted change) | `edit_file` | Exact string replacement (`Target` → `Replacement`) |
-| Run a shell command | `run_command` | Executes in `pwsh` on Windows, standard shell on Unix. On Windows, run bundled scripts with `bash <path>`. For long-running servers/daemons, set `IsDaemon: true` and `WaitMsBeforeAsync: 500`. |
-| Search file contents / find files | `run_command` | Use shell utilities (`git grep`, `Select-String`, `Get-ChildItem`) |
+| Run a shell command | `run_command` | Executes in standard shell on Unix/macOS, `pwsh` on Windows. On Windows, run bundled scripts with `bash <path>`. For long-running servers/daemons, set `IsDaemon: true` and `WaitMsBeforeAsync: 500`. |
+| Search file contents | `run_command` | Unix/macOS: `grep` or `rg`. Windows: `Select-String` or `git grep` |
+| Find files by name | `run_command` | Unix/macOS: `find`. Windows: `Get-ChildItem -Recurse -Filter <pattern>` |
 | Search the web / fetch URL | `search_web` | Web search and external documentation lookup |
 | Ask clarifying questions / choices | `ask_question` | Renders native GUI modal dialog with options instead of chat text |
 | Invoke a skill | `read_file` | Read skill's `SKILL.md` using the exact path from Available skills list in system prompt |
